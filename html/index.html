@@ -28,6 +28,8 @@
         <br>    we have courses tailored to your needs. Join our community of learners and start your educational journey
         <br> with us today!</p>
 
+        <hr>
+
         <h3>Choose Your Path from the training courses:</h3>
         <h4>C#</h4>
         <p>Learn the fundamentals of C# programming and build your own applications.</p>
@@ -42,37 +44,44 @@
         <h4>C++</h4>
         <p>Learn the fundamentals of C++ programming and build your own applications.</p>
 
+        <hr>
+
         <h3>Registration & Contact Form:</h3>
             <div>
         <label for="fullName">Full name:</label>
-        <input type="text" name="fullName" id="fullName">
+        <input type="text" name="fullName" id="fullName" required placeholder="Salsabil" readonly>
     </div>
     <br>
     
     <div>
         <label for="email">Email:</label>
-        <input type="email" name="email" id="email">
+        <input type="email" name="email" id="email" required placeholder="salsabil@example.com" disabled>
     </div>
     <br>
     
     <div>
         <label for="phone">Phone number:</label>
-        <input type="tel" name="phone" id="phone">
+        <input type="tel" name="phone" id="phone" value="0553456789">
     </div>
     <br>
 
     <div>
         <label for="age">Age:</label>
-        <input type="number" name="age" id="age">
+        <input type="number" name="age" id="age" step="5" required min="15" max="40">
         <br>
     </div>
     <br>
+
+    <div>
+        <label for="Password">Password:</label>
+        <input type="password" name="Password" id="Password" autofocus required placeholder="Enter your password" minlength="8" maxlength="20">
+    </div>
 
     <form>
     <div>
         <h4>Choose your Country:</h4>
         <select name="country" id="country">
-            <option value="">Select your country</option>
+            <option selected value="">Select your country</option>
             <option value="Jordan">Jordan</option>
             <option value="Egypt">Egypt</option>
             <option value="Saudi Arabia">Saudi Arabia</option>
@@ -142,7 +151,7 @@
         <h3>Experience level:</h3>
 
         <label for="Beginner">Beginner</label>
-        <input type="radio" name="ExperienceLevel" id="Beginner" value="Beginner">
+        <input type="radio" checked name="ExperienceLevel" id="Beginner" value="Beginner">
         
         <label for="Intermediate">Intermediate</label>
         <input type="radio" name="ExperienceLevel" id="Intermediate" value="Intermediate">
@@ -154,29 +163,16 @@
     <div>
         <h3>Select the course:</h3>
         
-        <label for="course1">C#</label>
-        <input type="checkbox" name="courses" id="course1" value="C#">
-        <br>
-
-        <label for="course2">Python</label>
-        <input type="checkbox" name="courses" id="course2" value="Python">
-        <br>
-
-        <label for="course3">JavaScript</label>
-        <input type="checkbox" name="courses" id="course3" value="JavaScript">
-        <br>
-
-        <label for="course4">HTML & CSS</label>
-        <input type="checkbox" name="courses" id="course4" value="HTML & CSS">
-        <br>
-
-        <label for="course5">Java</label>
-        <input type="checkbox" name="courses" id="course5" value="Java">
-        <br>
-
-        <label for="course6">C++</label>
-        <input type="checkbox" name="courses" id="course6" value="C++">
+        <select multiple name="course1" id="course1">
+            <option selected value="C#">C#</option>
+            <option value="Python">Python</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="HTML & CSS">HTML & CSS</option>
+            <option value="Java">Java</option>
+            <option value="C++">C++</option>
+        </select>
     </div>
+    
     <br>
 
     <div>
@@ -206,6 +202,8 @@
     </form>
     </main>
 
+    <hr>
+    
     <footer>
         <div>
             <h3>Tech Academy</h3>
