@@ -1,0 +1,280 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+    align-items: center;
+    background-color: #000000;
+}
+
+.explore {
+    font-size: 22px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    color: #fcfcfc;
+}
+
+.NasaLogo {
+    text-align: center;
+    width: 60px;
+    height: 60px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 5px;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+}
+
+.hero-content {
+    position: absolute;
+    color: white;
+    top: 30%;
+    right: 50%;
+    padding: 20px;
+    text-align: left;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.486);
+}
+
+.buttonNasa {
+    background-color: red;
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 7px 15px;
+    font-size: 14px;
+    border-radius: 10px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.image img {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+}
+
+/* About Section Header */
+.about-section {
+    padding: 20px;
+}
+
+.about-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.FeaNews {
+    font-size: 28px;
+    font-weight: bold;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.recPub {
+    color: #000000;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.recPub:hover {
+    text-decoration: underline;
+}
+
+/* Cards Grid Layout */
+.NasaImage {
+    display: grid;
+    gap: 15px;
+    width: 100%;
+    grid-template-columns: 2fr 2fr 1.5fr;
+}
+
+.right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* News Cards Common Rules */
+.news-card {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    border-radius: 4px;
+    overflow: hidden;
+    color: #ffffff;
+    width: 100%;
+}
+
+.news-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.news-card:hover img {
+    transform: scale(1.03);
+}
+
+.main-card {
+    height: 420px;
+}
+
+.side-card {
+    height: 202.5px;
+}
+
+/* Overlay and Text Content */
+.card-overlay {
+    position: absolute;
+    inset: 0;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tag {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.read-time {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+    opacity: 0.9;
+}
+
+.card-title {
+    color: #ffffff;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.main-card .card-title {
+    font-size: 20px;
+}
+
+.side-card .card-title {
+    font-size: 15px;
+}
+
+
+.description{
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 32px;
+    overflow: auto;
+}
+
+.containerDes{
+    flex: 0 0 auto;
+    width: 320px;
+}
+
+.description a {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    text-decoration: none;
+    color: #000000;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.description img{
+    border-radius: 100%;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+.text{
+    font-size: 15px;
+}
+
+.Secvideo{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 30px 20px;
+    align-items: center;
+    color: #ffffff;
+    background-color: #000000;
+}
+
+.containerVideo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    gap: 20px;
+    padding: 20px;
+    text-align: left;
+}
+
+.videoText{
+    width: 50%;
+    text-align: l;
+}
+
+.videoButton{
+    padding: 10px 15px;
+    font-weight: bold;
+    margin-top: 10px; 
+}
+
+.videoButton button{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #000000;
+    color: #ffffff;
+    border: 1px solid rgb(111, 107, 107);
+}
+
+iframe{
+    width: 80%;
+    max-width: 500px;
+    border: none;
+}
