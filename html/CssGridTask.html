@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Task - TechNews</title>
+  <link rel="stylesheet" href="../css/CssGridTask.css">
+</head>
+<body>
+  <div class="container">
+    
+    <header class="header">
+      <nav class="nav-bar">
+        <h2 class="logo">TechNews</h2>
+        <ul class="nav-links">
+          <li><a href="#" class="nav-link">Home</a></li>
+          <li><a href="#" class="nav-link">Articles</a></li>
+          <li><a href="#" class="nav-link">Categories</a></li>
+          <li><a href="#" class="nav-link">About</a></li>
+          <li><a href="#" class="nav-link">Contact</a></li>
+        </ul>
+        <button class="search-btn" aria-label="Search">🔍</button>
+      </nav>
+    </header>
+
+    <section class="hero-grid">
+      <div class="featured">
+        <span class="badge">FEATURED</span>
+        <h1>The Future of<br>Web Development</h1>
+        <p>Explore the latest trends and technologies shaping the future of web development.</p>
+        <button class="read-btn">Read More</button>
+      </div>
+
+      <div class="side-card performance">
+        <div class="icon-box"><img src="../Images/airplane.png" alt="Performance Icon"></div>
+        <div>
+          <h3>Fast Performance</h3>
+          <p>Optimizing websites for speed and better user experience.</p>
+        </div>
+      </div>
+
+      <div class="side-card clean-code">
+        <div class="icon-box"><img src="../Images/cleanCode.jpeg" alt="Clean Code Icon"></div>
+        <div>
+          <h3>Clean Code</h3>
+          <p>Writing maintainable and scalable code is essential.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="articles-section">
+      <h3 class="section-title">Latest Articles</h3>
+      
+      <div class="articles-grid-container">
+        <main class="cards-grid">
+          
+          <article class="card">
+            <div class="card-img"><img src="../Images/JS.png" alt="JavaScript"></div>
+            <div class="card-body">
+              <h4>JavaScript ES6 Features</h4>
+              <p>A look at the most useful features introduced in ES6.</p>
+              <hr/>
+              <div class="card-footer">
+                <span class="tag">JavaScript</span>
+                <span class="date">May 12, 2024</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-img"><img src="../Images/react.png" alt="React"></div>
+            <div class="card-body">
+              <h4>Getting Started with React</h4>
+              <p>Build modern user interfaces with React.js.</p>
+              <hr/>
+              <div class="card-footer">
+                <span class="tag">React</span>
+                <span class="date">May 10, 2024</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-img"><img src="../Images/CSS.jpg" alt="CSS"></div>
+            <div class="card-body">
+              <h4>CSS Grid Layout Guide</h4>
+              <p>Learn how to build powerful 2D layouts with CSS Grid.</p>
+              <hr/>
+              <div class="card-footer">
+                <span class="tag">CSS</span>
+                <span class="date">May 10, 2024</span>
+              </div>
+            </div>
+          </article>
+
+        </main>
+
+        <aside class="categories">
+          <h3 class="categories-title">Categories</h3>
+          <ul class="category-list">
+            <li class="category-item">
+                <span>Web Development</span>
+                <span class="category-count">12</span>
+            </li>
+            <li class="category-item">
+                <span>JavaScript</span>
+                <span class="category-count">8</span>
+            </li>
+            <li class="category-item">
+                <span>React</span>
+                <span class="category-count">6</span>
+            </li>
+            <li class="category-item">
+                <span>CSS</span>
+                <span class="category-count">10</span>
+            </li>
+            <li class="category-item">
+                <span>Tools</span>
+                <span class="category-count">4</span>
+            </li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="footer-col brand-col">
+          <h3>TechNews</h3>
+          <p>Stay updated with the latest news in technology.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Articles</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Documentation</a></li>
+            <li><a href="#">Tutorials</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </div>
+        <div class="footer-col newsletter-col">
+          <h4>Newsletter</h4>
+          <p>Subscribe to get the latest articles in your inbox.</p>
+          <div class="newsletter-form">
+            <input type="email" placeholder="Enter your email">
+            <button class="subscribe-btn">Subscribe</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 TechNews. All rights reserved.</p>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>
