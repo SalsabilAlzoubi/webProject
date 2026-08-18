@@ -4,6 +4,47 @@
     padding: 0;
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 5px rgba(255, 0, 0, 0.4);
+    }
+    to {
+        box-shadow: 0 0 20px rgba(255, 50, 50, 0.9);
+    }
+}
+
+@keyframes floatBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -18,12 +59,23 @@
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
     color: #fcfcfc;
+    transition: 0.3s ease;
+}
+
+.explore:hover {
+    transform: skewX(-10deg);
 }
 
 .NasaLogo {
     text-align: center;
     width: 60px;
     height: 60px;
+    transition: transform 0.6s ease;
+    cursor: pointer;
+}
+
+.NasaLogo:hover {
+    transform: rotate(360deg) scale(1.15);
 }
 
 .nav-links {
@@ -40,11 +92,18 @@
     color: #ffffff;
     font-size: 20px;
     font-family: 'Courier New', Courier, monospace;
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
-/* Hero Section */
+.nav-links a:hover {
+    color: #ff3b3b;
+    transform: translateY(-4px);
+}
+
 .hero-section {
     position: relative;
+    overflow: hidden;
 }
 
 .hero-content {
@@ -55,7 +114,8 @@
     padding: 20px;
     text-align: left;
     border-radius: 20px;
-    background-color: rgba(0, 0, 0, 0.486);
+    background-color: rgba(0, 0, 0, 0.6);
+    animation: fadeIn 1.2s ease-out forwards;
 }
 
 .buttonNasa {
@@ -69,6 +129,13 @@
     border: none;
     cursor: pointer;
     margin-top: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    animation: glow 2s infinite alternate;
+}
+
+.buttonNasa:hover {
+    transform: scale(1.1) translateY(-2px);
+    background-color: #d10000;
 }
 
 .image img {
@@ -77,7 +144,6 @@
     object-fit: cover;
 }
 
-/* About Section Header */
 .about-section {
     padding: 20px;
 }
@@ -102,13 +168,16 @@
     font-size: 15px;
     font-weight: 600;
     font-family: 'Courier New', Courier, monospace;
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .recPub:hover {
     text-decoration: underline;
+    transform: translateX(6px);
+    color: #d10000;
 }
 
-/* Cards Grid Layout */
 .NasaImage {
     display: grid;
     gap: 15px;
@@ -122,15 +191,20 @@
     gap: 15px;
 }
 
-/* News Cards Common Rules */
 .news-card {
     position: relative;
     display: block;
     text-decoration: none;
-    border-radius: 4px;
+    border-radius: 8px;
     overflow: hidden;
     color: #ffffff;
     width: 100%;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
 }
 
 .news-card img {
@@ -138,11 +212,11 @@
     height: 100%;
     object-fit: cover;
     display: block;
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
 }
 
 .news-card:hover img {
-    transform: scale(1.03);
+    transform: scale(1.08);
 }
 
 .main-card {
@@ -153,7 +227,6 @@
     height: 202.5px;
 }
 
-/* Overlay and Text Content */
 .card-overlay {
     position: absolute;
     inset: 0;
@@ -161,6 +234,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 60%);
 }
 
 .tag {
@@ -179,7 +253,6 @@
     font-weight: 700;
     letter-spacing: 1px;
     margin-bottom: 6px;
-    opacity: 0.9;
 }
 
 .card-title {
@@ -196,8 +269,7 @@
     font-size: 15px;
 }
 
-
-.description{
+.description {
     padding: 30px 20px;
     display: flex;
     flex-direction: row;
@@ -206,9 +278,14 @@
     overflow: auto;
 }
 
-.containerDes{
+.containerDes {
     flex: 0 0 auto;
     width: 320px;
+    transition: transform 0.3s ease;
+}
+
+.containerDes:hover {
+    transform: translateY(-5px);
 }
 
 .description a {
@@ -221,18 +298,25 @@
     font-family: 'Courier New', Courier, monospace;
 }
 
-.description img{
+.description img {
     border-radius: 100%;
     width: 80px;
     height: 80px;
     object-fit: cover;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    animation: floatBounce 4s ease infinite;
 }
 
-.text{
+.description a:hover img {
+    transform: scale(1.15) rotate(10deg);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.text {
     font-size: 15px;
 }
 
-.Secvideo{
+.Secvideo {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -242,7 +326,7 @@
     background-color: #000000;
 }
 
-.containerVideo{
+.containerVideo {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -252,18 +336,16 @@
     text-align: left;
 }
 
-.videoText{
+.videoText {
     width: 50%;
-    text-align: l;
 }
 
-.videoButton{
+.videoButton {
     padding: 10px 15px;
-    font-weight: bold;
-    margin-top: 10px; 
+    margin-top: 10px;
 }
 
-.videoButton button{
+.videoButton button {
     font-family: 'Courier New', Courier, monospace;
     font-size: 14px;
     font-weight: bold;
@@ -271,10 +353,131 @@
     background-color: #000000;
     color: #ffffff;
     border: 1px solid rgb(111, 107, 107);
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
 }
 
-iframe{
+.videoButton button:hover {
+    transform: scale(1.08);
+    background-color: #ffffff;
+    color: #000000;
+    border-color: #ffffff;
+}
+
+iframe {
     width: 80%;
     max-width: 500px;
     border: none;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+iframe:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.15);
+}
+
+
+@media (max-width: 1024px) {
+    .NasaImage {
+        grid-template-columns: 1fr 1fr; 
+    }
+
+    .right-column {
+        grid-column: span 2;
+        flex-direction: row;
+    }
+
+    .main-card {
+        height: 350px;
+    }
+
+    .side-card {
+        flex: 1;
+        height: 250px;
+    }
+
+    .hero-content {
+        right: 10%;
+        left: 10%;
+        top: 25%;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 15px;
+        padding: 0;
+    }
+
+    .NasaImage {
+        grid-template-columns: 1fr;
+    }
+
+    .right-column {
+        grid-column: span 1;
+        flex-direction: column;
+    }
+
+    .main-card {
+        height: 300px;
+    }
+
+    .side-card {
+        height: 200px;
+    }
+
+    .containerVideo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .videoText {
+        width: 100%;
+    }
+
+    iframe {
+        width: 100%;
+    }
+
+    .hero-content {
+        top: 15%;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .explore {
+        font-size: 18px;
+    }
+
+    .nav-links a {
+        font-size: 16px;
+    }
+
+    .FeaNews {
+        font-size: 22px;
+    }
+
+    .hero-content {
+        position: relative;
+        inset: 0;
+        border-radius: 0;
+        background-color: #111111;
+    }
+
+    .image img {
+        height: 30vh;
+    }
+
+    .containerDes {
+        width: 260px;
+    }
 }
