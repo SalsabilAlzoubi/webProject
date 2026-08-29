@@ -1,0 +1,66 @@
+body {
+    background-color: #4d5053;
+    color: #333333;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.hero-img {
+    height: 500px;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.55);
+}
+
+.fade-in {
+    animation: fadeInAnimation 0.8s ease-in-out;
+}
+
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+fieldset {
+    border: 1px solid #428c0d;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: #f1ffe58b;
+}
+
+fieldset legend {
+    float: none;
+    width: auto;
+    font-size: 18px;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: #428c0d;
+}
+
+.finance{
+    background-color: #f1ffe5;
+}
+
+.table-responsive {
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.maintenance{
+    background-color: #f1ffe5;
+}
+
+.services{
+    background-color: #f1ffe5;
+}
+
+.list-group-item {
+    border-color: rgba(0, 0, 0, 0.08);
+}
