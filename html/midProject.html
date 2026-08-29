@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Building Portal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/midProject.css">
+</head>
+<body class="py-4">
+
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-success rounded shadow-sm mb-4 px-4">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="index.html">🏢 Smart Portal</a>
+                <button class="navbar-toggler" type="button">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About Portal</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="finance.html">Financials & Dues</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="maintenance.html">Maintenance Requests</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="services.html">Local Providers</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <section id="hero" class="p-0 mb-4 position-relative overflow-hidden rounded shadow fade-in text-center">
+            <img src="../Images/مجمع سكني.jpg" alt="Modern Residential Building" class="w-100 hero-img">
+            <div class="hero-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-white p-4">
+                <h2 class="h3 fw-bold mb-2">Welcome to Your Smart Residential Portal</h2>
+                <p class="mb-0">Manage your apartment dues, request urgent facility repairs, and stay updated with building announcements in one unified platform.</p>
+            </div>
+        </section>
+
+       <section id="about" class="p-4 mb-4 bg-success rounded shadow-sm">
+            <div class="row align-items-center g-4">
+        
+                <div class="col-lg-6 text-start">
+                    <h2 class="h4 fw-bold mb-3 text-white">About The Portal & Building Guide</h2>
+                    <p class="text-white-50 mb-4">Our smart system connects residents with the building management committee and vetted local services to maintain high living standards.</p>
+            
+                    <h3 class="h6 fw-bold mb-2 text-white">Building Committee Welcome Message (Audio Guide)</h3>
+                    <div class="mb-3">
+                        <audio controls style="max-width: 100%;">
+                            <source src="../audio/Building_Together.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 text-lg-end">
+                    <div>
+                        <video class="rounded shadow-sm w-100" style="max-width: 450px; height: auto;" controls>
+                            <source src="../video/video1.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="cards" class="p-4 mb-4 fade-in bg-white rounded shadow-sm">
+            <h2 class="h4 fw-bold mb-4 text-success">Building Overview & Services</h2>
+    
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <fieldset class="h-100">
+                        <legend><strong>Common Fund Reserve</strong></legend>
+                        <div class="d-flex align-items-center gap-3">
+                            <img src="../Images/ReserveFunds.webp" alt="Finance Icon" class="rounded flex-shrink-0" width="130" height="130" style="object-fit: cover;">
+                            <div>
+                                <p class="mb-2 text-success"><strong>Balance:</strong> $1,450.00</p>
+                                <p class="text-success mb-0 small">Reserved for routine facility maintenance, elevator contracts, and emergency contingencies.</p>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div class="col-md-6">
+                    <fieldset class="h-100">
+                        <legend><strong>Upcoming Maintenance Alert</strong></legend>
+                        <div class="d-flex align-items-center gap-3">
+                            <img src="../Images/maintenance.avif" alt="Maintenance Icon" class="rounded flex-shrink-0" width="130" height="130" style="object-fit: cover;">
+                            <div>
+                                <p class="mb-0 text-success"><strong>Elevator & Water Tanks:</strong> Inspection scheduled for this coming Sunday at 10:00 AM.</p>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </section>
+
+        <section id="notices" class="p-4 mb-4 bg-white rounded fade-in shadow-sm">
+            <h2 class="h4 fw-bold mb-3 text-danger">Building Announcements & Guidelines</h2>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item bg-transparent text-danger"><strong>Elevator Maintenance:</strong> Scheduled for next Sunday from 10:00 AM to 12:00 PM.</li>
+                <li class="list-group-item bg-transparent text-danger"><strong>Water Tank Cleaning:</strong> Periodic disinfection on the 15th of this month.</li>
+                <li class="list-group-item bg-transparent text-danger"><strong>Building Committee Meeting:</strong> Outdoor lighting upgrade discussion at the end of the month.</li>
+            </ul>
+        </section>
+
+        <section id="finance" class="finance p-4 mb-4 rounded fade-in shadow-sm">
+            <h2 class="h4 fw-bold mb-3 text-success">Financial Management & Dues Status</h2>
+            <h3 class="h6 fw-bold text-dark mt-3">Monthly Service Fees Status (Current Month)</h3>
+            <div class="table-responsive">
+                <table class="table table-striped table-hover align-middle">
+                    <thead class="table-success">
+                        <tr>
+                            <th>Apartment No.</th>
+                            <th>Resident Name</th>
+                            <th>Due Amount</th>
+                            <th>Payment Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Apt 101</td>
+                            <td>Michael Adams</td>
+                            <td>$35.00</td>
+                            <td><span class="badge bg-success">Paid</span></td>
+                        </tr>
+                        <tr>
+                            <td>Apt 102</td>
+                            <td>Alex Johnson</td>
+                            <td>$35.00</td>
+                            <td><span class="badge bg-success">Paid</span></td>
+                        </tr>
+                        <tr>
+                            <td>Apt 103</td>
+                            <td>Sarah Williams</td>
+                            <td>$35.00</td>
+                            <td><span class="badge bg-warning text-dark">Pending</span></td>
+                        </tr>
+                        <tr>
+                            <td>Apt 104</td>
+                            <td>David Miller</td>
+                            <td>$35.00</td>
+                            <td><span class="badge bg-warning text-dark">Pending</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 class="h6 fw-bold text-dark mt-4">Upload Payment / Transfer Receipt</h3>
+            <form action="#" method="post" class="mt-3">
+                <div class="mb-3">
+                    <label for="apartment_number" class="form-label">Apartment Number:</label>
+                    <input type="text" id="apartment_number" name="apartment_number" class="form-control" placeholder="e.g. 102" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="month" class="form-label">For Month:</label>
+                    <select id="month" name="month" class="form-select">
+                        <option value="current">Current Month</option>
+                        <option value="next">Next Month</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="receipt_file" class="form-label">Receipt File / Image:</label>
+                    <input type="file" id="receipt_file" name="receipt_file" class="form-control" accept="image/*,.pdf" required>
+                </div>
+
+                <input type="submit" value="Submit Receipt" class="btn btn-success">
+            </form>
+        </section>
+
+        <section id="maintenance" class="maintenance p-4 mb-4 rounded fade-in shadow-sm">
+            <h2 class="h4 fw-bold mb-3 text-success">Maintenance Requests & Tracking</h2>
+            
+            <h3 class="h6 fw-bold text-dark mt-3">Report an Issue in Common Facilities</h3>
+            <form class="mt-3">
+                <div class="mb-3">
+                    <label for="resident_name" class="form-label">Resident Name:</label>
+                    <input type="text" id="resident_name" name="resident_name" class="form-control" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="facility_type" class="form-label">Facility / Area:</label>
+                    <select id="facility_type" name="facility_type" class="form-select" required>
+                        <option value="">-- Select Facility --</option>
+                        <option value="elevator">Elevator</option>
+                        <option value="lighting">Hallway / Entrance Lighting</option>
+                        <option value="water_pump">Common Water Pumps</option>
+                        <option value="gate">Main Gate / Parking Barrier</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="issue_desc" class="form-label">Issue Description:</label>
+                    <textarea id="issue_desc" name="issue_desc" rows="5" class="form-control" placeholder="Describe the issue and location in detail..." required></textarea>
+                </div>
+
+                <input type="submit" value="Submit Report" class="btn btn-success">
+            </form>
+
+            <h3 class="h6 fw-bold text-dark mt-5">Current Issue Reports Status</h3>
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped align-middle">
+                    <thead class="table-success">
+                        <tr>
+                            <th>Ticket ID</th>
+                            <th>Facility</th>
+                            <th>Description</th>
+                            <th>Reported Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#101</td>
+                            <td>Hallway Lighting</td>
+                            <td>2nd floor corridor light fixture malfunctioning</td>
+                            <td>2026-08-25</td>
+                            <td><span class="badge bg-info text-dark">In Progress
+                        <tr>
+                            <td>#100</td>
+                            <td>Main Entrance</td>
+                            <td>Electronic door access lock repaired</td>
+                            <td>2026-08-20</td>
+                            <td><span class="badge bg-success">Resolved</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="services" class="services p-4 mb-4 rounded fade-in shadow-sm">
+            <h2 class="h4 fw-bold mb-3 text-success">Approved Local Service Providers Directory</h2>
+            <div class="table-responsive">
+                <table class="table table-hover align-middle">
+                    <thead class="table-success">
+                        <tr>
+                            <th>Service Type</th>
+                            <th>Provider / Name</th>
+                            <th>Contact Phone</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Plumbing & Sanitary</td>
+                            <td>City Plumbing Services</td>
+                            <td><a href="tel:+1234567890" class="text-decoration-none">+1 (234) 567-890</a></td>
+                            <td>Approved for building water mains & pumps</td>
+                        </tr>
+                        <tr>
+                            <td>Electrical Works</td>
+                            <td>Volt Electricians</td>
+                            <td><a href="tel:+1234567891" class="text-decoration-none">+1 (234) 567-891</a></td>
+                            <td>Circuit panels and lighting maintenance</td>
+                        </tr>
+                        <tr>
+                            <td>Elevator Emergency</td>
+                            <td>SafeLift Co.</td>
+                            <td><a href="tel:+1234567892" class="text-decoration-none">+1 (234) 567-892</a></td>
+                            <td>Periodic contract maintenance - 24/7 emergency</td>
+                        </tr>
+                        <tr>
+                            <td>Cleaning Services</td>
+                            <td>Sparkle Cleaning Agency</td>
+                            <td><a href="tel:+1234567893" class="text-decoration-none">+1 (234) 567-893</a></td>
+                            <td>Hallways, corridors & tank sanitization</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <footer class="text-center py-0 text-white-50 border-top mt-3 bg-success rounded fade-in shadow-sm">
+            <p class="mb-1">Web Project: <strong>Smart Building Portal</strong> | Web Foundation Course Mid Project</p>
+            <p class="mb-0">&copy; 2026 All Rights Reserved.</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
