@@ -1,10 +1,23 @@
 const container = document.getElementById('container');
-const displayBox = document.getElementById('elements');
+
+const themeBtn = document.createElement('button');
+themeBtn.textContent = '🌓 Change Theme';
+themeBtn.className = 'btn btn-secondary mb-3';
+container.appendChild(themeBtn);
+
+if (localStorage.getItem('theme') === 'custom') {
+    document.body.classList.add('custom-theme');
+}
+
+themeBtn.addEventListener('click', () => {
+    document.body.classList.toggle('custom-theme');
+    const isCustom = document.body.classList.contains('custom-theme');
+    localStorage.setItem('theme', isCustom ? 'custom' : 'default');
+});
 
 const header = document.createElement('h1');
 header.textContent = 'Welcome to My Page';
 header.style.textAlign = 'center';
-header.style.color = 'blue';
 container.appendChild(header);
 
 const pContainer = document.createElement('p');
@@ -23,6 +36,7 @@ listHeader.innerText = 'List Header';
 listContainer.appendChild(listHeader);
 
 const list = document.createElement('ul');
+list.className = 'list-group my-3';
 listContainer.appendChild(list);
 
 const input = document.createElement('input');
@@ -58,24 +72,44 @@ function saveItems(newItem) {
     displayItems();
 }
 
-function displayItems() {
-    if (!displayBox) return;
+function deleteItem(index) {
+    const items = JSON.parse(localStorage.getItem('listItems')) || [];
+    items.splice(index, 1);
+    localStorage.setItem('listItems', JSON.stringify(items));
+    displayItems();
+}
 
-    displayBox.innerHTML = '';
+function displayItems() {
+    list.innerHTML = '';
 
     const items = JSON.parse(localStorage.getItem('listItems')) || [];
 
     if (items.length === 0) {
-        const p = document.createElement('p');
-        p.textContent = 'No items to display.';
-        displayBox.appendChild(p);
+        const emptyLi = document.createElement('li');
+        emptyLi.textContent = 'No items to display.';
+        emptyLi.className = 'list-group-item text-muted';
+        list.appendChild(emptyLi);
         return;
     }
 
-    items.forEach((itemText, idx) => {
-        const p = document.createElement('p');
-        p.textContent = `${idx + 1}. ${itemText}`;
-        displayBox.appendChild(p);
+    items.forEach((itemText, index) => {
+        const li = document.createElement('li');
+        li.className = 'list-group-item d-flex justify-content-between align-items-center';
+
+        const span = document.createElement('span');
+        span.textContent = `${index + 1}. ${itemText}`;
+
+        const deleteBtn = document.createElement('button');
+        deleteBtn.textContent = 'Delete';
+        deleteBtn.className = 'btn btn-danger btn-sm';
+        
+        deleteBtn.addEventListener('click', () => {
+            deleteItem(index);
+        });
+
+        li.appendChild(span);
+        li.appendChild(deleteBtn);
+        list.appendChild(li);
     });
 }
 

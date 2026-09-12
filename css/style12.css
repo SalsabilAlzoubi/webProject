@@ -1,0 +1,33 @@
+body {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+body.custom-theme {
+    background-color: #0a192f !important;
+    color: #f5f5dc !important;
+}
+
+body.custom-theme header,
+body.custom-theme nav,
+body.custom-theme .navbar,
+body.custom-theme footer {
+    background-color: #87ceeb !important;
+    color: #ffffff !important;
+}
+
+body.custom-theme aside,
+body.custom-theme .sidebar {
+    background-color: #301934 !important;
+    color: #ffc0cb !important;
+}
+
+body.custom-theme .card {
+    background-color: #1b4d3e !important;
+    color: #ffa500 !important;
+}
+
+body.custom-theme .container {
+    background-color: transparent;
+    color: inherit;
+}
